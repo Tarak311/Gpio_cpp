@@ -16,19 +16,19 @@
 #include "board.h"
 #endif
 #endif
-#include "gpiopin.hh"
-
+#include "../inc/gpiopin.hh"
+#include "../inc/spi.h"
 //#include <cr_section_macros.h>
 
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
+//using namespace spi;
 
-
-#include "FreeRTOS.h"
-#include "task.h"
-#include "queue.h"
-#include "semphr.h"
+#include "../freeRTOS/inc/FreeRTOS.h"
+#include "../freeRTOS/inc/task.h"
+#include "../freeRTOS/inc/queue.h"
+#include "../freeRTOS/inc/semphr.h"
 #define LPC_GPIO                  ((LPC_GPIO_T             *) LPC_GPIO0_BASE)
 #define LPC_GPIO1                 ((LPC_GPIO_T             *) LPC_GPIO1_BASE)
 #define LPC_GPIO2                 ((LPC_GPIO_T             *) LPC_GPIO2_BASE)
@@ -42,6 +42,7 @@
 bool input=false;
 bool output=true;
 int j;
+
 
 typedef struct
 {
@@ -116,15 +117,15 @@ static void blink2(void *pvParameters)
 	gpio_pin_port ledr( LPC_GPIO ,0,22,output,&muf);
 	gpio_pin_port ledg( LPC_GPIO ,3,25,output,&muf);
 	gpio_pin_port ledb( LPC_GPIO ,3,26,output,&muf);
-	//bool tempg;bool tempr;bool tempb;
+
 	while (1)
 	{
 		 if (xSemaphoreTake(mu,1000))
 		 {
-		//tempg=ledg;tempr=ledr;tempb=ledb;
+		/* blinks led in cycle*/
           if (ledg && ledb){ledg=false;ledb=true;ledr=true;}else{if(ledr && ledb){ledb=false;ledr=true;ledg=true;}else{ledr=false;ledg=true;ledb=true;}}
           xSemaphoreGive(mu);
-          }/* About a 3Hz on/off toggle rate */
+          }
          vTaskDelay(configTICK_RATE_HZ / 2);
 	}
 }
@@ -132,11 +133,11 @@ static void blink2(void *pvParameters)
 
 static void bottonreadandrelay(void *pvParameters) {
 
-    //gpio_pin_port* pin_input;
+    gpio_pin_port pin_input[3];
     gpio_pin_port pin_input1( LPC_GPIO ,1,26,input,&muf);
     gpio_pin_port pin_input2( LPC_GPIO ,1,25,input,&muf);
-//    pin_input[1]=pin_input1;
-  //  pin_input[2]=pin_input2;
+    pin_input[1]=pin_input1;
+    pin_input[2]=pin_input2;
 	while (1) {
 
 		//if (xSemaphoreTake(mu1,1000))
@@ -171,6 +172,8 @@ static void spi_data(void *pvParameters)
 int o;
 int p;
 	while (1) {
+		appSPIRun();
+		if (spi::spi_xfer_completed) { spi::spi_xfer_completed=0;appSPIRun();}}
 
     if  (xSemaphoreTake(the_signal,portMAX_DELAY))
         		{
@@ -185,9 +188,9 @@ int p;
             		};
 
 
-		//vTaskDelay(configTICK_RATE_HZ / 100); no need
+		vTaskDelay(configTICK_RATE_HZ / 100);
 	}
-}
+
 /*static void aimptask(void *pvParameters) {
 	while (1) {
     if  (xSemaphoreTake(the_signal,portMAX_DELAY))
@@ -251,6 +254,8 @@ vSemaphoreCreateBinary(the_signal2);
 queue_handle = xQueueCreate(3,sizeof(int));
 	/* LED1 toggle thread */
    setup();
+   program_init();
+
 	/* Start the scheduler */
 	vTaskStartScheduler();
 

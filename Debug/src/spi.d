@@ -1,5 +1,4 @@
-src/queue.o src/queue.d: ../src/queue.c ../src/FreeRTOS.h \
- ../src/projdefs.h ../src/FreeRTOSConfig.h \
+src/spi.o src/spi.d: ../src/spi.cpp ../src/../inc/spi.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/inc/chip.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/inc/lpc_types.h \
@@ -41,15 +40,9 @@ src/queue.o src/queue.d: ../src/queue.c ../src/FreeRTOS.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board_api.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/inc/lpc_types.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/lpc_phy.h \
- /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h \
- ../src/portable.h ../src/portmacro.h ../src/mpu_wrappers.h ../src/task.h \
- ../src/list.h ../src/queue.h
+ /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h
 
-../src/FreeRTOS.h:
-
-../src/projdefs.h:
-
-../src/FreeRTOSConfig.h:
+../src/../inc/spi.h:
 
 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:
 
@@ -134,15 +127,3 @@ src/queue.o src/queue.d: ../src/queue.c ../src/FreeRTOS.h \
 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/lpc_phy.h:
 
 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:
-
-../src/portable.h:
-
-../src/portmacro.h:
-
-../src/mpu_wrappers.h:
-
-../src/task.h:
-
-../src/list.h:
-
-../src/queue.h:

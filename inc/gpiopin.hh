@@ -1,6 +1,6 @@
-#include "FreeRTOS.h"
+#include "../freeRTOS/inc/FreeRTOS.h"
 #include "board.h"
-#include "semphr.h"
+#include "../freeRTOS/inc/semphr.h"
 //#include "semphr.h"
 class lock{
 private:
@@ -20,6 +20,7 @@ public:
 class gpio_pin_port {
 public:
 	 gpio_pin_port(LPC_GPIO_T* base,int port,int pin, bool direction,xSemaphoreHandle *mu);
+	 gpio_pin_port();
 	 ~gpio_pin_port();
 
 	void gpio_pin_set(gpio_pin_port* d );

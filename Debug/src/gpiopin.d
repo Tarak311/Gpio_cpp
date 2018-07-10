@@ -1,5 +1,7 @@
-src/gpiopin.o src/gpiopin.d: ../src/gpiopin.cpp ../src/FreeRTOS.h \
- ../src/projdefs.h ../src/FreeRTOSConfig.h \
+src/gpiopin.o src/gpiopin.d: ../src/gpiopin.cpp \
+ ../src/../freeRTOS/inc/FreeRTOS.h \
+ ../src/../freeRTOS/inc/../../inc/projdefs.h \
+ ../src/../freeRTOS/inc/FreeRTOSConfig.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/inc/chip.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/inc/lpc_types.h \
@@ -42,14 +44,18 @@ src/gpiopin.o src/gpiopin.d: ../src/gpiopin.cpp ../src/FreeRTOS.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/inc/lpc_types.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/lpc_phy.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h \
- ../src/portable.h ../src/portmacro.h ../src/mpu_wrappers.h \
- ../src/gpiopin.hh ../src/semphr.h ../src/queue.h
+ ../src/../freeRTOS/inc/../../inc/portable.h \
+ ../src/../freeRTOS/inc/../../inc/portmacro.h \
+ ../src/../freeRTOS/inc/../../inc/mpu_wrappers.h ../src/../inc/gpiopin.hh \
+ ../src/../inc/../freeRTOS/inc/FreeRTOS.h \
+ ../src/../inc/../freeRTOS/inc/semphr.h \
+ ../src/../inc/../freeRTOS/inc/queue.h ../src/../freeRTOS/inc/semphr.h
 
-../src/FreeRTOS.h:
+../src/../freeRTOS/inc/FreeRTOS.h:
 
-../src/projdefs.h:
+../src/../freeRTOS/inc/../../inc/projdefs.h:
 
-../src/FreeRTOSConfig.h:
+../src/../freeRTOS/inc/FreeRTOSConfig.h:
 
 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:
 
@@ -135,14 +141,18 @@ src/gpiopin.o src/gpiopin.d: ../src/gpiopin.cpp ../src/FreeRTOS.h \
 
 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:
 
-../src/portable.h:
+../src/../freeRTOS/inc/../../inc/portable.h:
 
-../src/portmacro.h:
+../src/../freeRTOS/inc/../../inc/portmacro.h:
 
-../src/mpu_wrappers.h:
+../src/../freeRTOS/inc/../../inc/mpu_wrappers.h:
 
-../src/gpiopin.hh:
+../src/../inc/gpiopin.hh:
 
-../src/semphr.h:
+../src/../inc/../freeRTOS/inc/FreeRTOS.h:
 
-../src/queue.h:
+../src/../inc/../freeRTOS/inc/semphr.h:
+
+../src/../inc/../freeRTOS/inc/queue.h:
+
+../src/../freeRTOS/inc/semphr.h:

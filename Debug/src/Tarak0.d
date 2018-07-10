@@ -41,10 +41,17 @@ src/Tarak0.o src/Tarak0.d: ../src/Tarak0.cpp \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/inc/lpc_types.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/lpc_phy.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h \
- ../src/gpiopin.hh ../src/FreeRTOS.h ../src/projdefs.h \
- ../src/FreeRTOSConfig.h ../src/portable.h ../src/portmacro.h \
- ../src/mpu_wrappers.h ../src/semphr.h ../src/queue.h ../src/task.h \
- ../src/list.h
+ ../src/../inc/gpiopin.hh ../src/../inc/../freeRTOS/inc/FreeRTOS.h \
+ ../src/../inc/../freeRTOS/inc/../../inc/projdefs.h \
+ ../src/../inc/../freeRTOS/inc/FreeRTOSConfig.h \
+ ../src/../inc/../freeRTOS/inc/../../inc/portable.h \
+ ../src/../inc/../freeRTOS/inc/../../inc/portmacro.h \
+ ../src/../inc/../freeRTOS/inc/../../inc/mpu_wrappers.h \
+ ../src/../inc/../freeRTOS/inc/semphr.h \
+ ../src/../inc/../freeRTOS/inc/queue.h ../src/../inc/spi.h \
+ ../src/../freeRTOS/inc/FreeRTOS.h ../src/../freeRTOS/inc/task.h \
+ ../src/../freeRTOS/inc/list.h ../src/../freeRTOS/inc/queue.h \
+ ../src/../freeRTOS/inc/semphr.h
 
 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:
 
@@ -130,24 +137,32 @@ src/Tarak0.o src/Tarak0.d: ../src/Tarak0.cpp \
 
 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:
 
-../src/gpiopin.hh:
+../src/../inc/gpiopin.hh:
 
-../src/FreeRTOS.h:
+../src/../inc/../freeRTOS/inc/FreeRTOS.h:
 
-../src/projdefs.h:
+../src/../inc/../freeRTOS/inc/../../inc/projdefs.h:
 
-../src/FreeRTOSConfig.h:
+../src/../inc/../freeRTOS/inc/FreeRTOSConfig.h:
 
-../src/portable.h:
+../src/../inc/../freeRTOS/inc/../../inc/portable.h:
 
-../src/portmacro.h:
+../src/../inc/../freeRTOS/inc/../../inc/portmacro.h:
 
-../src/mpu_wrappers.h:
+../src/../inc/../freeRTOS/inc/../../inc/mpu_wrappers.h:
 
-../src/semphr.h:
+../src/../inc/../freeRTOS/inc/semphr.h:
 
-../src/queue.h:
+../src/../inc/../freeRTOS/inc/queue.h:
 
-../src/task.h:
+../src/../inc/spi.h:
 
-../src/list.h:
+../src/../freeRTOS/inc/FreeRTOS.h:
+
+../src/../freeRTOS/inc/task.h:
+
+../src/../freeRTOS/inc/list.h:
+
+../src/../freeRTOS/inc/queue.h:
+
+../src/../freeRTOS/inc/semphr.h:

@@ -29,11 +29,11 @@
  * this code.
  */
 
-#include "FreeRTOS.h"
-#include "task.h"
-#include "FreeRTOSCommonHooks.h"
+#include "../inc/FreeRTOS.h"
+#include "../inc/task.h"
+#include "../inc/FreeRTOSCommonHooks.h"
 
-#include "chip.h"
+#include "../inc/chip.h"
 
 /*****************************************************************************
  * Private types/enumerations/variables

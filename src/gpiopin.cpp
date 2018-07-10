@@ -4,10 +4,10 @@
  *  Created on: Mar 19, 2018
  *      Author: tarak
  */
-#include "FreeRTOS.h"
-#include "gpiopin.hh"
+#include "../freeRTOS/inc/FreeRTOS.h"
+#include "../inc/gpiopin.hh"
 #include "board.h"
-#include "semphr.h"
+#include "../freeRTOS/inc/semphr.h"
 
 gpio_pin_port::gpio_pin_port(LPC_GPIO_T* base,int port,int pin,bool direction,xSemaphoreHandle *mu)
 {
@@ -19,6 +19,10 @@ dir = direction;
 
 Chip_GPIO_WriteDirBit(LPC_GPIO, gpio_port, gpio_pin, dir);
 this->gpio_pin_set(this);
+
+}
+gpio_pin_port::gpio_pin_port()
+{
 
 }
  bool set=1;
