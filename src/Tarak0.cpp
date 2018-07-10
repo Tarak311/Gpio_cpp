@@ -17,7 +17,7 @@
 #endif
 #endif
 #include "../inc/gpiopin.hh"
-#include "../inc/spi.h"
+#include "../inc/spi.hh"
 //#include <cr_section_macros.h>
 
 // TODO: insert other include files here
@@ -133,11 +133,11 @@ static void blink2(void *pvParameters)
 
 static void bottonreadandrelay(void *pvParameters) {
 
-    gpio_pin_port pin_input[3];
+    //gpio_pin_port pin_input[3];
     gpio_pin_port pin_input1( LPC_GPIO ,1,26,input,&muf);
     gpio_pin_port pin_input2( LPC_GPIO ,1,25,input,&muf);
-    pin_input[1]=pin_input1;
-    pin_input[2]=pin_input2;
+   // pin_input[1]=pin_input1;
+    //pin_input[2]=pin_input2;
 	while (1) {
 
 		//if (xSemaphoreTake(mu1,1000))
@@ -172,9 +172,9 @@ static void spi_data(void *pvParameters)
 int o;
 int p;
 	while (1) {
-		appSPIRun();
-		if (spi::spi_xfer_completed) { spi::spi_xfer_completed=0;appSPIRun();}}
-
+		//appSPIRun();
+		if (spi::spi_xfer_completed) { spi::spi_xfer_completed=0;appSPIRun();}
+/*
     if  (xSemaphoreTake(the_signal,portMAX_DELAY))
         		{
     			o=10;
@@ -186,10 +186,10 @@ int p;
         			 p=8;
         			//xQueueSend(queue_handle,&p,4000);
             		};
+*/
 
-
-		vTaskDelay(configTICK_RATE_HZ / 100);
-	}
+    vTaskDelay(configTICK_RATE_HZ / 100);
+	}}
 
 /*static void aimptask(void *pvParameters) {
 	while (1) {
@@ -223,9 +223,9 @@ void setup()
 	xTaskCreate(bottonreadandrelay, (signed char *) "bottonreadandrelay",
 					configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
 					(xTaskHandle *) NULL);
-	xTaskCreate(spi_data, (signed char *) "TX/RX function",
+	/*xTaskCreate(spi_data, (signed char *) "TX/RX function",
 						configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
-						(xTaskHandle *) NULL);
+						(xTaskHandle *) NULL);*/
     xTaskCreate(blink, (signed char *) "blink",
 						configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
 						(xTaskHandle *) NULL);

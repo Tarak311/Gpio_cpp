@@ -1,4 +1,4 @@
-src/spi.o src/spi.d: ../src/spi.cpp ../src/../inc/spi.h \
+src/spi.o src/spi.d: ../src/spi.cpp ../src/../inc/spi.hh \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/inc/chip.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/inc/lpc_types.h \
@@ -42,7 +42,7 @@ src/spi.o src/spi.d: ../src/spi.cpp ../src/../inc/spi.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/lpc_phy.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h
 
-../src/../inc/spi.h:
+../src/../inc/spi.hh:
 
 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:
 

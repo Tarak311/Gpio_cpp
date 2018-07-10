@@ -48,7 +48,7 @@ src/Tarak0.o src/Tarak0.d: ../src/Tarak0.cpp \
  ../src/../inc/../freeRTOS/inc/../../inc/portmacro.h \
  ../src/../inc/../freeRTOS/inc/../../inc/mpu_wrappers.h \
  ../src/../inc/../freeRTOS/inc/semphr.h \
- ../src/../inc/../freeRTOS/inc/queue.h ../src/../inc/spi.h \
+ ../src/../inc/../freeRTOS/inc/queue.h ../src/../inc/spi.hh \
  ../src/../freeRTOS/inc/FreeRTOS.h ../src/../freeRTOS/inc/task.h \
  ../src/../freeRTOS/inc/list.h ../src/../freeRTOS/inc/queue.h \
  ../src/../freeRTOS/inc/semphr.h
@@ -155,7 +155,7 @@ src/Tarak0.o src/Tarak0.d: ../src/Tarak0.cpp \
 
 ../src/../inc/../freeRTOS/inc/queue.h:
 
-../src/../inc/spi.h:
+../src/../inc/spi.hh:
 
 ../src/../freeRTOS/inc/FreeRTOS.h:
 

@@ -6,7 +6,8 @@
  */
 
 
-#include "../inc/spi.h"
+#include "../inc/spi.hh"
+#include "spiclass.h"
 
 //using namespace spi;
 
