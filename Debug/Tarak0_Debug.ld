@@ -5,7 +5,7 @@
  * Generated linker script file for LPC1769
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * MCUXpresso IDE v10.1.1 [Build 606] [2018-01-02] on 26-Mar-2018 8:48:11 PM
+ * MCUXpresso IDE v10.2.0 [Build 759] [2018-05-15] on 10-Jul-2018 12:12:17 AM
  */
 
 INCLUDE "Tarak0_Debug_library.ld"
@@ -50,15 +50,13 @@ SECTIONS
         PROVIDE(__CRP_WORD_END__ = .) ;
         ASSERT(!(__CRP_WORD_START__ == __CRP_WORD_END__), "Linker CRP Enabled, but no CRP_WORD provided within application");
         /* End of Code Read Protection */
-
-
-    } >MFlash512
+    } > MFlash512
 
     .text : ALIGN(4)
     {
-        *(.text*)
-        *(.rodata .rodata.* .constdata .constdata.*)
-        . = ALIGN(4);
+       *(.text*)
+       *(.rodata .rodata.* .constdata .constdata.*)
+       . = ALIGN(4);
             /* C++ constructors etc */
             . = ALIGN(4);
             KEEP(*(.init))
@@ -98,6 +96,7 @@ SECTIONS
     {
         *(.ARM.extab* .gnu.linkonce.armextab.*)
     } > MFlash512
+
     __exidx_start = .;
 
     .ARM.exidx : ALIGN(4)
@@ -109,6 +108,7 @@ SECTIONS
     _etext = .;
         
     /* DATA section for RamAHB32 */
+
     .data_RAM2 : ALIGN(4)
     {
         FILL(0xff)
@@ -120,7 +120,6 @@ SECTIONS
         . = ALIGN(4) ;
         PROVIDE(__end_data_RAM2 = .) ;
      } > RamAHB32 AT>MFlash512
-
     /* MAIN DATA SECTION */
     .uninit_RESERVED : ALIGN(4)
     {
@@ -128,6 +127,7 @@ SECTIONS
         . = ALIGN(4) ;
         _end_uninit_RESERVED = .;
     } > RamLoc32
+
     /* Main DATA section (RamLoc32) */
     .data : ALIGN(4)
     {
@@ -139,6 +139,7 @@ SECTIONS
        . = ALIGN(4) ;
        _edata = . ;
     } > RamLoc32 AT>MFlash512
+
     /* BSS section for RamAHB32 */
     .bss_RAM2 : ALIGN(4)
     {
@@ -148,6 +149,7 @@ SECTIONS
        . = ALIGN (. != 0 ? 4 : 1) ; /* avoid empty segment */
        PROVIDE(__end_bss_RAM2 = .) ;
     } > RamAHB32 
+
     /* MAIN BSS SECTION */
     .bss : ALIGN(4)
     {
@@ -158,6 +160,7 @@ SECTIONS
         _ebss = .;
         PROVIDE(end = .);
     } > RamLoc32
+
     /* NOINIT section for RamAHB32 */
     .noinit_RAM2 (NOLOAD) : ALIGN(4)
     {
@@ -165,6 +168,7 @@ SECTIONS
        *(.noinit.$RamAHB32*)
        . = ALIGN(4) ;
     } > RamAHB32 
+
     /* DEFAULT NOINIT SECTION */
     .noinit (NOLOAD): ALIGN(4)
     {

@@ -44,7 +44,7 @@ all: Tarak0.axf
 Tarak0.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU C++ Linker'
-	arm-none-eabi-c++ -nostdlib -L"/home/tarak/workspace/LPC/01/lpc_board_nxp_lpcxpresso_1769/Debug" -L"/home/tarak/workspace/LPC/01/lpc_chip_175x_6x/Debug" -L"/home/tarak/workspace/LPC/01/CMSIS_DSPLIB_CM3/lib" -Xlinker -Map="Tarak0.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Tarak0_Debug.ld" -o "Tarak0.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-c++ -nostdlib -L"/home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug" -L"/home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug" -L"/home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/CMSIS_DSPLIB_CM3/lib" -Xlinker -Map="Tarak0.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Tarak0_Debug.ld" -o "Tarak0.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
@@ -59,7 +59,6 @@ post-build:
 	-arm-none-eabi-size "Tarak0.axf"; # arm-none-eabi-objcopy -v -O binary "Tarak0.axf" "Tarak0.bin" ; # checksum -p LPC1769 -d "Tarak0.bin";
 	-@echo ' '
 
-.PHONY: all clean dependents
-.SECONDARY: post-build
+.PHONY: all clean dependents post-build
 
 -include ../makefile.targets

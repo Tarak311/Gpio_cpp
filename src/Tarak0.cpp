@@ -1,10 +1,11 @@
 /*
 ===============================================================================
- Name        : main.c
- Author      : $(author)
- Version     :
- Copyright   : $(copyright)
- Description : main definition
+ Name        : Tarak0.cpp
+ Author      : Tarak Patel
+ Version     :0.0.1
+ Copyright   : GPL
+ Description : RTOS program which comunicate with raspberry  pi
+  	  	  	   via spi bus and reads temprature value by i2c sensor
 ===============================================================================
 */
 
@@ -164,7 +165,7 @@ static void bottonreadandrelay(void *pvParameters) {
 		vTaskDelay(configTICK_RATE_HZ/4);
 	}
 }
-/*static void processandrelay(void *pvParameters)
+static void spi_data(void *pvParameters)
 {
 
 int o;
@@ -186,7 +187,7 @@ int p;
 
 		//vTaskDelay(configTICK_RATE_HZ / 100); no need
 	}
-}*/
+}
 /*static void aimptask(void *pvParameters) {
 	while (1) {
     if  (xSemaphoreTake(the_signal,portMAX_DELAY))
@@ -219,9 +220,9 @@ void setup()
 	xTaskCreate(bottonreadandrelay, (signed char *) "bottonreadandrelay",
 					configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
 					(xTaskHandle *) NULL);
-	/*xTaskCreate(processandrelay, (signed char *) "processandrelay",
+	xTaskCreate(spi_data, (signed char *) "TX/RX function",
 						configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
-						(xTaskHandle *) NULL);*/
+						(xTaskHandle *) NULL);
     xTaskCreate(blink, (signed char *) "blink",
 						configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
 						(xTaskHandle *) NULL);
