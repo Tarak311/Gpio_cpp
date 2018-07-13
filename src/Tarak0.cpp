@@ -7,7 +7,7 @@
  Description : RTOS program which comunicate with raspberry  pi
   	  	  	   via spi bus and reads temprature value by i2c sensor
 ===============================================================================
-*/
+ */
 
 #if defined (__USE_LPCOPEN)
 #if defined(NO_BOARD_LIB)
@@ -18,12 +18,17 @@
 #endif
 #include "../inc/gpiopin.hh"
 #include "../inc/spi.hh"
+#include "../freeRTOS/inc/list.h"
+#include "../inc/portmacro.h"
+#include "spiclass.h"
+
 //#include <cr_section_macros.h>
 
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
 //using namespace spi;
+static xLIST list;
 
 #include "../freeRTOS/inc/FreeRTOS.h"
 #include "../freeRTOS/inc/task.h"
@@ -37,79 +42,56 @@
 
 
 ///////////*******************All the handles**********************///////////
-
+//xLIST* list;
 
 bool input=false;
 bool output=true;
 int j;
 
 
-typedef struct
-{
 
-	uint32_t 	gpio_p;
-	uint8_t     gpio_port;
-	LPC_GPIO_T  *base;
-
-    bool s;
-}gpiopin;
 xSemaphoreHandle   mu=0;
 xSemaphoreHandle   mu1=0;
 xSemaphoreHandle   muf=0;
 xSemaphoreHandle   the_signal=0;
 xSemaphoreHandle   the_signal2=0;
 xQueueHandle       	queue_handle = 0;
-gpiopin            gp[4];
+
 
 ///////////*******************All the functions**********************///////////
 
-	void gpio_pin_set(gpiopin gp)
-		{
-        lock lockf(&mu); // resouce aqq is init tecquniqe
-		Chip_GPIO_WritePortBit(gp.base,gp.gpio_p,gp.gpio_port,1);
-		}
-	void gpio_pin_reset(gpiopin gp)
-		{
-		lock lockf(&mu); // this will deleted if function is exited no matter what execption or no execption
-		Chip_GPIO_WritePortBit(gp.base,gp.gpio_p,gp.gpio_port,0);
-		}
-	bool gpio_pin_read(gpiopin gp)
-		{
-		lock lockf(&mu);
-		return	Chip_GPIO_ReadPortBit(gp.base,gp.gpio_port,gp.gpio_p);
-		}
 
-		/* Sets up system hardware */
+/* Sets up system hardware */
 static void prvSetupHardware(void)
 {
 	SystemCoreClockUpdate();
 	Board_Init();
-
-	/* Initial LED0 state is off */
 	Board_LED_Set(0, false);
+	Board_SPI_Init(false);
+
+	Chip_SPI_Init(LPC_SPI);
+	NVIC_EnableIRQ(SPI_IRQn);
 }
 
 /* LED1 toggle thread */
 static void blink(void *pvParameters) {
 
-	//gpio_pin_port* pin_output1 =new gpio_pin_port(LPC_GPIO ,1,27,output,&mu);
-	//gpio_pin_port* pin_output2 =new gpio_pin_port(LPC_GPIO ,1,28,output,&mu);
-    //gpio_pin_port* pin_output3 =new gpio_pin_port(LPC_GPIO ,1,27,input,&mu);
+
 	gpio_pin_port pin1(LPC_GPIO ,0,2,output,&mu);
 	gpio_pin_port pin2(LPC_GPIO ,0,3,output,&mu);
 	int b;
 	bool pin1_status=true;
-	//bool pin_op1=true;
-		while (1) {
+
+	while (1) {
 		//if (xSemaphoreTake(mu1,1000))
-        {
-        	//if(pin_op1) {pin_op1=false;*pin_output1=true;*pin_output2=false;} else {pin_op1=true;*pin_output1=false;*pin_output2=true;};
-        	if(pin1_status){pin1_status=false;pin1=true;pin2=false;}else{pin1_status=true;pin1=false;pin2=true;};
-        	//xSemaphoreGive(mu1);
-        }
+		{
+			//if(pin_op1) {pin_op1=false;*pin_output1=true;*pin_output2=false;} else {pin_op1=true;*pin_output1=false;*pin_output2=true;};
+			if(pin1_status){pin1_status=false;pin1=true;pin2=false;}else{pin1_status=true;pin1=false;pin2=true;};
+			//xSemaphoreGive(mu1);
+		}
 		/* About a 3Hz on/off toggle rate */
-       xQueueReceive(queue_handle,&b,10);
-        vTaskDelay(configTICK_RATE_HZ /b);
+		xQueueReceive(queue_handle,&b,10);
+		vTaskDelay(configTICK_RATE_HZ /b);
 	}
 }
 static void blink2(void *pvParameters)
@@ -120,87 +102,79 @@ static void blink2(void *pvParameters)
 
 	while (1)
 	{
-		 if (xSemaphoreTake(mu,1000))
-		 {
-		/* blinks led in cycle*/
-          if (ledg && ledb){ledg=false;ledb=true;ledr=true;}else{if(ledr && ledb){ledb=false;ledr=true;ledg=true;}else{ledr=false;ledg=true;ledb=true;}}
-          xSemaphoreGive(mu);
-          }
-         vTaskDelay(configTICK_RATE_HZ / 2);
+		if (xSemaphoreTake(mu,1000))
+		{
+			/* blinks led in cycle*/
+			if (ledg && ledb){ledg=false;ledb=true;ledr=true;}else{if(ledr && ledb){ledb=false;ledr=true;ledg=true;}else{ledr=false;ledg=true;ledb=true;}}
+			xSemaphoreGive(mu);
+		}
+		vTaskDelay(configTICK_RATE_HZ / 2);
 	}
 }
 /* LED2 toggle thread */
 
 static void bottonreadandrelay(void *pvParameters) {
 
-    //gpio_pin_port pin_input[3];
-    gpio_pin_port pin_input1( LPC_GPIO ,1,26,input,&muf);
-    gpio_pin_port pin_input2( LPC_GPIO ,1,25,input,&muf);
-   // pin_input[1]=pin_input1;
-    //pin_input[2]=pin_input2;
+
+	gpio_pin_port pin_input1( LPC_GPIO ,1,26,input,&muf);
+	gpio_pin_port pin_input2( LPC_GPIO ,1,25,input,&muf);
+
 	while (1) {
 
 		//if (xSemaphoreTake(mu1,1000))
-		  {
-
-
-
-	    if(pin_input1)
-	    {
-	    	int o=14;
-	    	xQueueSend(queue_handle,&o,4000);
-	    }
-	    if(pin_input2)
 		{
-	    	int v=8;
-	    	xQueueSend(queue_handle,&v,4000);
-           }
-	    else
-	    {
-	    	int h=1;
-	    	xQueueSend(queue_handle,&h,4000);
-	    }
-		  }
+
+
+
+			if(pin_input1)
+			{
+				int o=14;
+				xQueueSend(queue_handle,&o,4000);
+			}
+			if(pin_input2)
+			{
+				int v=6;
+				xQueueSend(queue_handle,&v,4000);
+			}
+			else
+			{
+				int h=1;
+				xQueueSend(queue_handle,&h,4000);
+			}
+		}
 		// xSemaphoreGive(mu);
 		/* About a 7Hz on/off toggle rate */
 		vTaskDelay(configTICK_RATE_HZ/4);
 	}
 }
-static void spi_data(void *pvParameters)
+/*static void spi_data(void *pvParameters)
 {
 
-int o;
-int p;
-	while (1) {
-		//appSPIRun();
+	int o,p;
+	o=43;
+	spi_class spisend(list,&o,LPC_SPI,SPI_BITS_8,SPI_CLOCK_MODE0,SPI_DATA_MSB_FIRST);
+	while (1)
+	{
 		if (spi::spi_xfer_completed) { spi::spi_xfer_completed=0;appSPIRun();}
-/*
-    if  (xSemaphoreTake(the_signal,portMAX_DELAY))
-        		{
-    			o=10;
-    			//xQueueSend(queue_handle,&o,4000);
-        		}
-    //use isr intr insted of this..
-    else if (xSemaphoreTake(the_signal2,portMAX_DELAY))
-            		{
-        			 p=8;
-        			//xQueueSend(queue_handle,&p,4000);
-            		};
-*/
 
-    vTaskDelay(configTICK_RATE_HZ / 100);
-	}}
+		if  (xSemaphoreTake(the_signal,portMAX_DELAY))
+		{
+			o=10;
+			//xQueueSend(queue_handle,&o,4000);
+		}
+		//use isr intr insted of this..
+		else if (xSemaphoreTake(the_signal2,portMAX_DELAY))
+		{
+			p=8;
+			//xQueueSend(queue_handle,&p,4000);
+		};
 
-/*static void aimptask(void *pvParameters) {
-	while (1) {
-    if  (xSemaphoreTake(the_signal,portMAX_DELAY))
-        		{
- // TASK
-        		};
 
 		vTaskDelay(configTICK_RATE_HZ / 100);
 	}
 }*/
+
+
 /* UART (or output) thread */
 static void vUARTTask(void *pvParameters) {
 	int tickCnt = 0;
@@ -216,23 +190,23 @@ static void vUARTTask(void *pvParameters) {
 void setup()
 {
 
-    Chip_GPIO_WriteDirBit(LPC_GPIO, 3, 26, true);
+	Chip_GPIO_WriteDirBit(LPC_GPIO, 3, 26, true);
 	xTaskCreate(blink2, (signed char *) "blink2",
-					configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
-					(xTaskHandle *) NULL);
+			configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
+			(xTaskHandle *) NULL);
 	xTaskCreate(bottonreadandrelay, (signed char *) "bottonreadandrelay",
-					configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
-					(xTaskHandle *) NULL);
+			configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
+			(xTaskHandle *) NULL);
 	/*xTaskCreate(spi_data, (signed char *) "TX/RX function",
 						configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
 						(xTaskHandle *) NULL);*/
-    xTaskCreate(blink, (signed char *) "blink",
-						configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
-						(xTaskHandle *) NULL);
-		/* UART output thread, simply counts seconds */
-		xTaskCreate(vUARTTask, (signed char *) "vTaskUart",
-					configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
-					(xTaskHandle *) NULL);
+	xTaskCreate(blink, (signed char *) "blink",
+			configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
+			(xTaskHandle *) NULL);
+	/* UART output thread, simply counts seconds */
+	xTaskCreate(vUARTTask, (signed char *) "vTaskUart",
+			configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
+			(xTaskHandle *) NULL);
 
 }
 /*****************************************************************************
@@ -243,24 +217,83 @@ void setup()
  * @brief	main routine for FreeRTOS blinky example
  * @return	Nothing, function should not exit
  */
+void spi_setup(void)
+{
+
+	int o;o=2;
+	Chip_SPI_Int_FlushData(LPC_SPI);
+	spi_class spi_main_thread(list,&o,LPC_SPI,SPI_BITS_8,SPI_CLOCK_MODE0,SPI_DATA_MSB_FIRST);
+	spi_main_thread.spiRW();
+	spi_class::spi_data* sdev = (spi_class::spi_data*)listGET_OWNER_OF_HEAD_ENTRY(&list);
+	Chip_SPI_Int_RWFrames8Bits(LPC_SPI, &(sdev->spi_xf));
+	Chip_SPI_Int_Enable(LPC_SPI);
+
+}
 int main()
 {
 
-   prvSetupHardware();
-mu = xSemaphoreCreateMutex();
-mu1 = xSemaphoreCreateMutex();
-vSemaphoreCreateBinary(the_signal);
-vSemaphoreCreateBinary(the_signal2);
-queue_handle = xQueueCreate(3,sizeof(int));
-	/* LED1 toggle thread */
-   setup();
-   program_init();
 
-	/* Start the scheduler */
+	prvSetupHardware();
+
+	mu = xSemaphoreCreateMutex();
+	mu1 = xSemaphoreCreateMutex();
+	vSemaphoreCreateBinary(the_signal);
+	vSemaphoreCreateBinary(the_signal2);
+	queue_handle = xQueueCreate(3,sizeof(int));
+
+
+
+	setup();
+	vListInitialise(&list);
+	SPI_CONFIG_FORMAT_T  spi_format;
+	spi_format.bits = SPI_BITS_8;
+		spi_format.clockMode = SPI_CLOCK_MODE0;
+		spi_format.dataOrder = SPI_DATA_MSB_FIRST;
+		Chip_SPI_SetFormat(LPC_SPI, &spi_format);
+	spi_setup();
+
 	vTaskStartScheduler();
 
-	/* Should never arrive here */
-return 1;
+	return 1;
+
+}
+
+void SPI_IRQHandler(void)
+{
+
+	Chip_SPI_Int_Disable(LPC_SPI);	/* Disable all interrupt */
+
+	spi_class::spi_data* spidev = (spi_class::spi_data*)listGET_OWNER_OF_HEAD_ENTRY(&list);
+	spi_class::spi_data* spidev_next = (spi_class::spi_data*)(spidev->listitem.pxNext);
+	if(!(spidev == spidev_next))
+	{
+		if (spidev->spi_xfer_completed)
+		{
+			uxListRemove(&(spidev->listitem));
+			spidev=spidev_next;
+			spidev_next = (spi_class::spi_data*)(spidev->listitem.pxNext);
+		}
+		Chip_SPI_Int_FlushData(spidev->pSPI0);
+		Chip_SPI_Int_RWFrames8Bits(LPC_SPI,&(spidev->spi_xf));
+
+		if ((spidev->spi_xf.cnt) < (spidev->spi_xf.length))
+		{
+			Chip_SPI_Int_Enable(LPC_SPI);	/* enable all interrupts */
+		}
+		else if(spidev)
+		{
+			spidev->spi_xfer_completed = 1;
+			uxListRemove(&(spidev->listitem));
+			Chip_SPI_Int_Enable(LPC_SPI);
+		}
+	}
+	else
+	{
+		if (spidev->spi_xfer_completed){}
+		else if ((spidev->spi_xf.cnt) < (spidev->spi_xf.length)) {Chip_SPI_Int_Enable(LPC_SPI);}
+		else {spidev->spi_xfer_completed = 1;}
+	}
+
 }
 
 

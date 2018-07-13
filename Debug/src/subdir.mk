@@ -8,7 +8,8 @@ CPP_SRCS += \
 ../src/cr_cpp_config.cpp \
 ../src/cr_startup_lpc175x_6x.cpp \
 ../src/gpiopin.cpp \
-../src/spi.cpp 
+../src/spi.cpp \
+../src/spiclass.cpp 
 
 C_SRCS += \
 ../src/crp.c \
@@ -21,6 +22,7 @@ OBJS += \
 ./src/crp.o \
 ./src/gpiopin.o \
 ./src/spi.o \
+./src/spiclass.o \
 ./src/sysinit.o 
 
 CPP_DEPS += \
@@ -28,7 +30,8 @@ CPP_DEPS += \
 ./src/cr_cpp_config.d \
 ./src/cr_startup_lpc175x_6x.d \
 ./src/gpiopin.d \
-./src/spi.d 
+./src/spi.d \
+./src/spiclass.d 
 
 C_DEPS += \
 ./src/crp.d \

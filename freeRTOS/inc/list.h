@@ -4,19 +4,19 @@
 
     VISIT http://www.FreeRTOS.org TO ENSURE YOU ARE USING THE LATEST VERSION.
 
-    ***************************************************************************
-     *                                                                       *
-     *    FreeRTOS provides completely free yet professionally developed,    *
-     *    robust, strictly quality controlled, supported, and cross          *
-     *    platform software that has become a de facto standard.             *
-     *                                                                       *
-     *    Help yourself get started quickly and support the FreeRTOS         *
-     *    project by purchasing a FreeRTOS tutorial book, reference          *
-     *    manual, or both from: http://www.FreeRTOS.org/Documentation        *
-     *                                                                       *
-     *    Thank you!                                                         *
-     *                                                                       *
-    ***************************************************************************
+ ***************************************************************************
+ *                                                                       *
+ *    FreeRTOS provides completely free yet professionally developed,    *
+ *    robust, strictly quality controlled, supported, and cross          *
+ *    platform software that has become a de facto standard.             *
+ *                                                                       *
+ *    Help yourself get started quickly and support the FreeRTOS         *
+ *    project by purchasing a FreeRTOS tutorial book, reference          *
+ *    manual, or both from: http://www.FreeRTOS.org/Documentation        *
+ *                                                                       *
+ *    Thank you!                                                         *
+ *                                                                       *
+ ***************************************************************************
 
     This file is part of the FreeRTOS distribution.
 
@@ -36,14 +36,14 @@
 
     1 tab == 4 spaces!
 
-    ***************************************************************************
-     *                                                                       *
-     *    Having a problem?  Start by reading the FAQ "My application does   *
-     *    not run, what could be wrong?"                                     *
-     *                                                                       *
-     *    http://www.FreeRTOS.org/FAQHelp.html                               *
-     *                                                                       *
-    ***************************************************************************
+ ***************************************************************************
+ *                                                                       *
+ *    Having a problem?  Start by reading the FAQ "My application does   *
+ *    not run, what could be wrong?"                                     *
+ *                                                                       *
+ *    http://www.FreeRTOS.org/FAQHelp.html                               *
+ *                                                                       *
+ ***************************************************************************
 
     http://www.FreeRTOS.org - Documentation, books, training, latest versions,
     license and Real Time Engineers Ltd. contact details.
@@ -61,7 +61,7 @@
     mission critical applications that require provable dependability.
 
     1 tab == 4 spaces!
-*/
+ */
 
 /*
  * This is the list implementation used by the scheduler.  While it is tailored
@@ -123,8 +123,9 @@
  * FreeRTOSConfig.h (without the quotes):
  * "#define configLIST_VOLATILE volatile"
  */
+#include "portmacro.h"
 #ifndef configLIST_VOLATILE
-	#define configLIST_VOLATILE
+#define configLIST_VOLATILE
 #endif /* configSUPPORT_CROSS_MODULE_OPTIMISATION */
 
 #ifdef __cplusplus
@@ -136,6 +137,8 @@ extern "C" {
 struct xLIST_ITEM
 {
 	configLIST_VOLATILE portTickType xItemValue;	/*< The value being listed.  In most cases this is used to sort the list in descending order. */
+	uint16_t xtype;
+	uint32_t xtime;
 	struct xLIST_ITEM * configLIST_VOLATILE pxNext;	/*< Pointer to the next xListItem in the list. */
 	struct xLIST_ITEM * configLIST_VOLATILE pxPrevious;/*< Pointer to the previous xListItem in the list. */
 	void * pvOwner;									/*< Pointer to the object (normally a TCB) that contains the list item.  There is therefore a two way link between the object containing the list item and the list item itself. */
@@ -158,8 +161,14 @@ typedef struct xLIST
 {
 	configLIST_VOLATILE unsigned portBASE_TYPE uxNumberOfItems;
 	xListItem * configLIST_VOLATILE pxIndex;		/*< Used to walk through the list.  Points to the last item returned by a call to pvListGetOwnerOfNextEntry (). */
-	xMiniListItem xListEnd;							/*< List item that contains the maximum possible item value meaning it is always at the end of the list and is therefore used as a marker. */
+	xListItem xListEnd;							/*< List item that contains the maximum possible item value meaning it is always at the end of the list and is therefore used as a marker. */
 } xList;
+typedef struct xLISTD
+{
+	configLIST_VOLATILE unsigned portBASE_TYPE uxNumberOfItems;
+	xListItem * configLIST_VOLATILE pxIndex;		/*< Used to walk through the list.  Points to the last item returned by a call to pvListGetOwnerOfNextEntry (). */
+	xListItem xListEnd;							/*< List item that contains the maximum possible item value meaning it is always at the end of the list and is therefore used as a marker. */
+} xListD;
 
 /*
  * Access macro to set the owner of a list item.  The owner of a list item
@@ -241,16 +250,16 @@ typedef struct xLIST
  * \ingroup LinkedList
  */
 #define listGET_OWNER_OF_NEXT_ENTRY( pxTCB, pxList )										\
-{																							\
-xList * const pxConstList = ( pxList );														\
+		{																							\
+	xList * const pxConstList = ( pxList );														\
 	/* Increment the index to the next item and return the item, ensuring */				\
-	/* we don't return the marker used at the end of the list.  */							\
-	( pxConstList )->pxIndex = ( pxConstList )->pxIndex->pxNext;							\
-	if( ( void * ) ( pxConstList )->pxIndex == ( void * ) &( ( pxConstList )->xListEnd ) )	\
-	{																						\
-		( pxConstList )->pxIndex = ( pxConstList )->pxIndex->pxNext;						\
-	}																						\
-	( pxTCB ) = ( pxConstList )->pxIndex->pvOwner;											\
+		/* we don't return the marker used at the end of the list.  */							\
+		( pxConstList )->pxIndex = ( pxConstList )->pxIndex->pxNext;							\
+		if( ( void * ) ( pxConstList )->pxIndex == ( void * ) &( ( pxConstList )->xListEnd ) )	\
+		{																						\
+			( pxConstList )->pxIndex = ( pxConstList )->pxIndex->pxNext;						\
+		}																						\
+		( pxTCB ) = ( pxConstList )->pxIndex->pvOwner;											\
 }
 
 

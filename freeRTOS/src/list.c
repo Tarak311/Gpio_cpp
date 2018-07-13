@@ -92,7 +92,7 @@ void vListInitialise( xList * const pxList )
 }
 /*-----------------------------------------------------------*/
 
-void vListInitialiseItem( xListItem * const pxItem )
+void vListInitialiseItem( xListItem *  pxItem )
 {
 	/* Make sure the list item is not recorded as being on a list. */
 	pxItem->pvContainer = NULL;

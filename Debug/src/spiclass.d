@@ -1,4 +1,4 @@
-src/Tarak0.o src/Tarak0.d: ../src/Tarak0.cpp \
+src/spiclass.o src/spiclass.d: ../src/spiclass.cpp ../src/spiclass.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/inc/chip.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/inc/lpc_types.h \
@@ -41,20 +41,11 @@ src/Tarak0.o src/Tarak0.d: ../src/Tarak0.cpp \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/inc/lpc_types.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/lpc_phy.h \
  /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h \
- ../src/../inc/gpiopin.hh ../src/../inc/../freeRTOS/inc/FreeRTOS.h \
- ../src/../inc/../freeRTOS/inc/../../inc/projdefs.h \
- ../src/../inc/../freeRTOS/inc/FreeRTOSConfig.h \
- ../src/../inc/../freeRTOS/inc/../../inc/portable.h \
- ../src/../inc/../freeRTOS/inc/../../inc/portmacro.h \
- ../src/../inc/../freeRTOS/inc/../../inc/mpu_wrappers.h \
- ../src/../inc/../freeRTOS/inc/semphr.h \
- ../src/../inc/../freeRTOS/inc/queue.h ../src/../inc/spi.hh \
- ../src/../inc/../freeRTOS/inc/list.h \
+ ../src/../inc/spi.hh ../src/../inc/../freeRTOS/inc/list.h \
  ../src/../inc/../freeRTOS/inc/portmacro.h ../src/../inc/portmacro.h \
- ../src/../freeRTOS/inc/list.h ../src/../inc/portmacro.h \
- ../src/spiclass.h ../src/../freeRTOS/inc/FreeRTOS.h \
- ../src/../freeRTOS/inc/task.h ../src/../freeRTOS/inc/list.h \
- ../src/../freeRTOS/inc/queue.h ../src/../freeRTOS/inc/semphr.h
+ ../src/../freeRTOS/inc/list.h ../src/../inc/portmacro.h
+
+../src/spiclass.h:
 
 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:
 
@@ -140,24 +131,6 @@ src/Tarak0.o src/Tarak0.d: ../src/Tarak0.cpp \
 
 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:
 
-../src/../inc/gpiopin.hh:
-
-../src/../inc/../freeRTOS/inc/FreeRTOS.h:
-
-../src/../inc/../freeRTOS/inc/../../inc/projdefs.h:
-
-../src/../inc/../freeRTOS/inc/FreeRTOSConfig.h:
-
-../src/../inc/../freeRTOS/inc/../../inc/portable.h:
-
-../src/../inc/../freeRTOS/inc/../../inc/portmacro.h:
-
-../src/../inc/../freeRTOS/inc/../../inc/mpu_wrappers.h:
-
-../src/../inc/../freeRTOS/inc/semphr.h:
-
-../src/../inc/../freeRTOS/inc/queue.h:
-
 ../src/../inc/spi.hh:
 
 ../src/../inc/../freeRTOS/inc/list.h:
@@ -169,15 +142,3 @@ src/Tarak0.o src/Tarak0.d: ../src/Tarak0.cpp \
 ../src/../freeRTOS/inc/list.h:
 
 ../src/../inc/portmacro.h:
-
-../src/spiclass.h:
-
-../src/../freeRTOS/inc/FreeRTOS.h:
-
-../src/../freeRTOS/inc/task.h:
-
-../src/../freeRTOS/inc/list.h:
-
-../src/../freeRTOS/inc/queue.h:
-
-../src/../freeRTOS/inc/semphr.h:
