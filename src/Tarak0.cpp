@@ -144,7 +144,7 @@ static void bottonreadandrelay(void *pvParameters) {
 		}
 		// xSemaphoreGive(mu);
 		/* About a 7Hz on/off toggle rate */
-		vTaskDelay(configTICK_RATE_HZ/4);
+		vTaskDelay(configTICK_RATE_HZ/2);
 	}
 }
 /*static void spi_data(void *pvParameters)

@@ -3235,475 +3235,474 @@ END GROUP
  .text._ZL6blink2Pv
                 0x00000000000005c4      0x1b8 ./src/Tarak0.o
  .text._ZL18bottonreadandrelayPv
-                0x000000000000077c       0xb4 ./src/Tarak0.o
+                0x000000000000077c       0xb8 ./src/Tarak0.o
  .text._ZL9vUARTTaskPv
-                0x0000000000000830       0x28 ./src/Tarak0.o
+                0x0000000000000834       0x28 ./src/Tarak0.o
  .text._Z5setupv
-                0x0000000000000858       0xac ./src/Tarak0.o
-                0x0000000000000858                setup()
+                0x000000000000085c       0xac ./src/Tarak0.o
+                0x000000000000085c                setup()
  .text._Z9spi_setupv
-                0x0000000000000904       0x70 ./src/Tarak0.o
-                0x0000000000000904                spi_setup()
- .text.main     0x0000000000000974       0xd0 ./src/Tarak0.o
-                0x0000000000000974                main
- .text._ZdlPv   0x0000000000000a44       0x16 ./src/cr_cpp_config.o
-                0x0000000000000a44                operator delete(void*)
+                0x0000000000000908       0x70 ./src/Tarak0.o
+                0x0000000000000908                spi_setup()
+ .text.main     0x0000000000000978       0xd0 ./src/Tarak0.o
+                0x0000000000000978                main
+ .text._ZdlPv   0x0000000000000a48       0x16 ./src/cr_cpp_config.o
+                0x0000000000000a48                operator delete(void*)
  .text.Chip_GPIO_SetPinState
-                0x0000000000000a5a       0x64 ./src/gpiopin.o
+                0x0000000000000a5e       0x64 ./src/gpiopin.o
  .text.Chip_GPIO_WritePortBit
-                0x0000000000000abe       0x2c ./src/gpiopin.o
+                0x0000000000000ac2       0x2c ./src/gpiopin.o
  .text.Chip_GPIO_GetPinState
-                0x0000000000000aea       0x38 ./src/gpiopin.o
+                0x0000000000000aee       0x38 ./src/gpiopin.o
  .text.Chip_GPIO_ReadPortBit
-                0x0000000000000b22       0x26 ./src/gpiopin.o
+                0x0000000000000b26       0x26 ./src/gpiopin.o
  .text.Chip_GPIO_SetPinDIROutput
-                0x0000000000000b48       0x36 ./src/gpiopin.o
+                0x0000000000000b4c       0x36 ./src/gpiopin.o
  .text.Chip_GPIO_SetPinDIRInput
-                0x0000000000000b7e       0x3a ./src/gpiopin.o
+                0x0000000000000b82       0x3a ./src/gpiopin.o
  .text.Chip_GPIO_SetPinDIR
-                0x0000000000000bb8       0x42 ./src/gpiopin.o
+                0x0000000000000bbc       0x42 ./src/gpiopin.o
  .text.Chip_GPIO_WriteDirBit
-                0x0000000000000bfa       0x2e ./src/gpiopin.o
+                0x0000000000000bfe       0x2e ./src/gpiopin.o
  .text._ZN13gpio_pin_portC2EP10LPC_GPIO_TiibPPv
-                0x0000000000000c28       0x58 ./src/gpiopin.o
-                0x0000000000000c28                gpio_pin_port::gpio_pin_port(LPC_GPIO_T*, int, int, bool, void**)
-                0x0000000000000c28                gpio_pin_port::gpio_pin_port(LPC_GPIO_T*, int, int, bool, void**)
+                0x0000000000000c2c       0x58 ./src/gpiopin.o
+                0x0000000000000c2c                gpio_pin_port::gpio_pin_port(LPC_GPIO_T*, int, int, bool, void**)
+                0x0000000000000c2c                gpio_pin_port::gpio_pin_port(LPC_GPIO_T*, int, int, bool, void**)
  .text._ZN13gpio_pin_port12gpio_pin_setEPS_
-                0x0000000000000c80       0x2c ./src/gpiopin.o
-                0x0000000000000c80                gpio_pin_port::gpio_pin_set(gpio_pin_port*)
+                0x0000000000000c84       0x2c ./src/gpiopin.o
+                0x0000000000000c84                gpio_pin_port::gpio_pin_set(gpio_pin_port*)
  .text._ZN13gpio_pin_port14gpio_pin_resetEPS_
-                0x0000000000000cac       0x2c ./src/gpiopin.o
-                0x0000000000000cac                gpio_pin_port::gpio_pin_reset(gpio_pin_port*)
+                0x0000000000000cb0       0x2c ./src/gpiopin.o
+                0x0000000000000cb0                gpio_pin_port::gpio_pin_reset(gpio_pin_port*)
  .text._ZN13gpio_pin_port13gpio_pin_readEPS_
-                0x0000000000000cd8       0x26 ./src/gpiopin.o
-                0x0000000000000cd8                gpio_pin_port::gpio_pin_read(gpio_pin_port*)
+                0x0000000000000cdc       0x26 ./src/gpiopin.o
+                0x0000000000000cdc                gpio_pin_port::gpio_pin_read(gpio_pin_port*)
  .text._Z10bufferInitPhS_
-                0x0000000000000cfe       0x3c ./src/spi.o
-                0x0000000000000cfe                bufferInit(unsigned char*, unsigned char*)
- *fill*         0x0000000000000d3a        0x2 ff
+                0x0000000000000d02       0x3c ./src/spi.o
+                0x0000000000000d02                bufferInit(unsigned char*, unsigned char*)
+ *fill*         0x0000000000000d3e        0x2 ff
  .text._Z22assign_value_list_itemP10xLIST_ITEM
-                0x0000000000000d3c       0x24 ./src/spi.o
-                0x0000000000000d3c                assign_value_list_item(xLIST_ITEM*)
+                0x0000000000000d40       0x24 ./src/spi.o
+                0x0000000000000d40                assign_value_list_item(xLIST_ITEM*)
  .text.Chip_SPI_SetFormat
-                0x0000000000000d60       0x3a ./src/spiclass.o
+                0x0000000000000d64       0x3a ./src/spiclass.o
  .text.Chip_SPI_SetMode
-                0x0000000000000d9a       0x26 ./src/spiclass.o
+                0x0000000000000d9e       0x26 ./src/spiclass.o
  .text._ZN9spi_classC2ER5xLISTPiP9LPC_SPI_T10SPI_BITS_T16SPI_CLOCK_MODE_T16SPI_DATA_ORDER_T
-                0x0000000000000dc0       0x88 ./src/spiclass.o
-                0x0000000000000dc0                spi_class::spi_class(xLIST&, int*, LPC_SPI_T*, SPI_BITS_T, SPI_CLOCK_MODE_T, SPI_DATA_ORDER_T)
-                0x0000000000000dc0                spi_class::spi_class(xLIST&, int*, LPC_SPI_T*, SPI_BITS_T, SPI_CLOCK_MODE_T, SPI_DATA_ORDER_T)
+                0x0000000000000dc4       0x88 ./src/spiclass.o
+                0x0000000000000dc4                spi_class::spi_class(xLIST&, int*, LPC_SPI_T*, SPI_BITS_T, SPI_CLOCK_MODE_T, SPI_DATA_ORDER_T)
+                0x0000000000000dc4                spi_class::spi_class(xLIST&, int*, LPC_SPI_T*, SPI_BITS_T, SPI_CLOCK_MODE_T, SPI_DATA_ORDER_T)
  .text._ZN9spi_classD2Ev
-                0x0000000000000e48       0x20 ./src/spiclass.o
-                0x0000000000000e48                spi_class::~spi_class()
-                0x0000000000000e48                spi_class::~spi_class()
+                0x0000000000000e4c       0x20 ./src/spiclass.o
+                0x0000000000000e4c                spi_class::~spi_class()
+                0x0000000000000e4c                spi_class::~spi_class()
  .text._ZN9spi_classD0Ev
-                0x0000000000000e68       0x22 ./src/spiclass.o
-                0x0000000000000e68                spi_class::~spi_class()
+                0x0000000000000e6c       0x22 ./src/spiclass.o
+                0x0000000000000e6c                spi_class::~spi_class()
  .text._ZN9spi_class5spiRWEv
-                0x0000000000000e8a       0x76 ./src/spiclass.o
-                0x0000000000000e8a                spi_class::spiRW()
+                0x0000000000000e8e       0x76 ./src/spiclass.o
+                0x0000000000000e8e                spi_class::spiRW()
  .text.SystemInit
-                0x0000000000000f00       0x24 ./src/sysinit.o
-                0x0000000000000f00                SystemInit
+                0x0000000000000f04       0x24 ./src/sysinit.o
+                0x0000000000000f04                SystemInit
  .text.vApplicationIdleHook
-                0x0000000000000f24        0xe ./freeRTOS/src/FreeRTOSCommonHooks.o
-                0x0000000000000f24                vApplicationIdleHook
+                0x0000000000000f28        0xe ./freeRTOS/src/FreeRTOSCommonHooks.o
+                0x0000000000000f28                vApplicationIdleHook
  .text.pvPortMalloc
-                0x0000000000000f32       0x22 ./freeRTOS/src/heap_3.o
-                0x0000000000000f32                pvPortMalloc
+                0x0000000000000f36       0x22 ./freeRTOS/src/heap_3.o
+                0x0000000000000f36                pvPortMalloc
  .text.vPortFree
-                0x0000000000000f54       0x24 ./freeRTOS/src/heap_3.o
-                0x0000000000000f54                vPortFree
+                0x0000000000000f58       0x24 ./freeRTOS/src/heap_3.o
+                0x0000000000000f58                vPortFree
  .text.vListInitialise
-                0x0000000000000f78       0x3e ./freeRTOS/src/list.o
-                0x0000000000000f78                vListInitialise
+                0x0000000000000f7c       0x3e ./freeRTOS/src/list.o
+                0x0000000000000f7c                vListInitialise
  .text.vListInitialiseItem
-                0x0000000000000fb6       0x18 ./freeRTOS/src/list.o
-                0x0000000000000fb6                vListInitialiseItem
+                0x0000000000000fba       0x18 ./freeRTOS/src/list.o
+                0x0000000000000fba                vListInitialiseItem
  .text.vListInsertEnd
-                0x0000000000000fce       0x46 ./freeRTOS/src/list.o
-                0x0000000000000fce                vListInsertEnd
+                0x0000000000000fd2       0x46 ./freeRTOS/src/list.o
+                0x0000000000000fd2                vListInsertEnd
  .text.vListInsert
-                0x0000000000001014       0x70 ./freeRTOS/src/list.o
-                0x0000000000001014                vListInsert
+                0x0000000000001018       0x70 ./freeRTOS/src/list.o
+                0x0000000000001018                vListInsert
  .text.uxListRemove
-                0x0000000000001084       0x52 ./freeRTOS/src/list.o
-                0x0000000000001084                uxListRemove
- *fill*         0x00000000000010d6        0x2 ff
+                0x0000000000001088       0x52 ./freeRTOS/src/list.o
+                0x0000000000001088                uxListRemove
+ *fill*         0x00000000000010da        0x2 ff
  .text.pxPortInitialiseStack
-                0x00000000000010d8       0x54 ./freeRTOS/src/port.o
-                0x00000000000010d8                pxPortInitialiseStack
+                0x00000000000010dc       0x54 ./freeRTOS/src/port.o
+                0x00000000000010dc                pxPortInitialiseStack
  .text.prvTaskExitError
-                0x000000000000112c        0xa ./freeRTOS/src/port.o
- *fill*         0x0000000000001136        0x2 ff
+                0x0000000000001130        0xa ./freeRTOS/src/port.o
+ *fill*         0x000000000000113a        0x2 ff
  .text.SVC_Handler
-                0x0000000000001138       0x24 ./freeRTOS/src/port.o
-                0x0000000000001138                SVC_Handler
+                0x000000000000113c       0x24 ./freeRTOS/src/port.o
+                0x000000000000113c                SVC_Handler
  .text.prvPortStartFirstTask
-                0x000000000000115c       0x18 ./freeRTOS/src/port.o
+                0x0000000000001160       0x18 ./freeRTOS/src/port.o
  .text.xPortStartScheduler
-                0x0000000000001174       0x38 ./freeRTOS/src/port.o
-                0x0000000000001174                xPortStartScheduler
+                0x0000000000001178       0x38 ./freeRTOS/src/port.o
+                0x0000000000001178                xPortStartScheduler
  .text.vPortYield
-                0x00000000000011ac       0x20 ./freeRTOS/src/port.o
-                0x00000000000011ac                vPortYield
+                0x00000000000011b0       0x20 ./freeRTOS/src/port.o
+                0x00000000000011b0                vPortYield
  .text.vPortEnterCritical
-                0x00000000000011cc       0x24 ./freeRTOS/src/port.o
-                0x00000000000011cc                vPortEnterCritical
+                0x00000000000011d0       0x24 ./freeRTOS/src/port.o
+                0x00000000000011d0                vPortEnterCritical
  .text.vPortExitCritical
-                0x00000000000011f0       0x24 ./freeRTOS/src/port.o
-                0x00000000000011f0                vPortExitCritical
+                0x00000000000011f4       0x24 ./freeRTOS/src/port.o
+                0x00000000000011f4                vPortExitCritical
  .text.ulPortSetInterruptMask
-                0x0000000000001214       0x12 ./freeRTOS/src/port.o
-                0x0000000000001214                ulPortSetInterruptMask
+                0x0000000000001218       0x12 ./freeRTOS/src/port.o
+                0x0000000000001218                ulPortSetInterruptMask
  .text.vPortClearInterruptMask
-                0x0000000000001226        0x8 ./freeRTOS/src/port.o
-                0x0000000000001226                vPortClearInterruptMask
- *fill*         0x000000000000122e        0x2 ff
+                0x000000000000122a        0x8 ./freeRTOS/src/port.o
+                0x000000000000122a                vPortClearInterruptMask
+ *fill*         0x0000000000001232        0x2 ff
  .text.PendSV_Handler
-                0x0000000000001230       0x40 ./freeRTOS/src/port.o
-                0x0000000000001230                PendSV_Handler
+                0x0000000000001234       0x40 ./freeRTOS/src/port.o
+                0x0000000000001234                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000000001270       0x28 ./freeRTOS/src/port.o
-                0x0000000000001270                SysTick_Handler
+                0x0000000000001274       0x28 ./freeRTOS/src/port.o
+                0x0000000000001274                SysTick_Handler
  .text.vPortSuppressTicksAndSleep
-                0x0000000000001298      0x15c ./freeRTOS/src/port.o
-                0x0000000000001298                vPortSuppressTicksAndSleep
+                0x000000000000129c      0x15c ./freeRTOS/src/port.o
+                0x000000000000129c                vPortSuppressTicksAndSleep
  .text.vPortSetupTimerInterrupt
-                0x00000000000013f4       0x68 ./freeRTOS/src/port.o
-                0x00000000000013f4                vPortSetupTimerInterrupt
+                0x00000000000013f8       0x68 ./freeRTOS/src/port.o
+                0x00000000000013f8                vPortSetupTimerInterrupt
  .text.xQueueGenericReset
-                0x000000000000145c       0xa4 ./freeRTOS/src/queue.o
-                0x000000000000145c                xQueueGenericReset
+                0x0000000000001460       0xa4 ./freeRTOS/src/queue.o
+                0x0000000000001460                xQueueGenericReset
  .text.xQueueGenericCreate
-                0x0000000000001500       0x78 ./freeRTOS/src/queue.o
-                0x0000000000001500                xQueueGenericCreate
+                0x0000000000001504       0x78 ./freeRTOS/src/queue.o
+                0x0000000000001504                xQueueGenericCreate
  .text.xQueueCreateMutex
-                0x0000000000001578       0x84 ./freeRTOS/src/queue.o
-                0x0000000000001578                xQueueCreateMutex
+                0x000000000000157c       0x84 ./freeRTOS/src/queue.o
+                0x000000000000157c                xQueueCreateMutex
  .text.xQueueGenericSend
-                0x00000000000015fc      0x110 ./freeRTOS/src/queue.o
-                0x00000000000015fc                xQueueGenericSend
+                0x0000000000001600      0x110 ./freeRTOS/src/queue.o
+                0x0000000000001600                xQueueGenericSend
  .text.xQueueGenericReceive
-                0x000000000000170c      0x16c ./freeRTOS/src/queue.o
-                0x000000000000170c                xQueueGenericReceive
+                0x0000000000001710      0x16c ./freeRTOS/src/queue.o
+                0x0000000000001710                xQueueGenericReceive
  .text.prvCopyDataToQueue
-                0x0000000000001878       0xce ./freeRTOS/src/queue.o
+                0x000000000000187c       0xce ./freeRTOS/src/queue.o
  .text.prvCopyDataFromQueue
-                0x0000000000001946       0x4c ./freeRTOS/src/queue.o
+                0x000000000000194a       0x4c ./freeRTOS/src/queue.o
  .text.prvUnlockQueue
-                0x0000000000001992       0x98 ./freeRTOS/src/queue.o
+                0x0000000000001996       0x98 ./freeRTOS/src/queue.o
  .text.prvIsQueueEmpty
-                0x0000000000001a2a       0x2c ./freeRTOS/src/queue.o
+                0x0000000000001a2e       0x2c ./freeRTOS/src/queue.o
  .text.prvIsQueueFull
-                0x0000000000001a56       0x30 ./freeRTOS/src/queue.o
- *fill*         0x0000000000001a86        0x2 ff
+                0x0000000000001a5a       0x30 ./freeRTOS/src/queue.o
+ *fill*         0x0000000000001a8a        0x2 ff
  .text.xTaskGenericCreate
-                0x0000000000001a88      0x140 ./freeRTOS/src/tasks.o
-                0x0000000000001a88                xTaskGenericCreate
+                0x0000000000001a8c      0x140 ./freeRTOS/src/tasks.o
+                0x0000000000001a8c                xTaskGenericCreate
  .text.vTaskDelay
-                0x0000000000001bc8       0x54 ./freeRTOS/src/tasks.o
-                0x0000000000001bc8                vTaskDelay
+                0x0000000000001bcc       0x54 ./freeRTOS/src/tasks.o
+                0x0000000000001bcc                vTaskDelay
  .text.vTaskStartScheduler
-                0x0000000000001c1c       0x58 ./freeRTOS/src/tasks.o
-                0x0000000000001c1c                vTaskStartScheduler
+                0x0000000000001c20       0x58 ./freeRTOS/src/tasks.o
+                0x0000000000001c20                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x0000000000001c74       0x1c ./freeRTOS/src/tasks.o
-                0x0000000000001c74                vTaskSuspendAll
+                0x0000000000001c78       0x1c ./freeRTOS/src/tasks.o
+                0x0000000000001c78                vTaskSuspendAll
  .text.prvGetExpectedIdleTime
-                0x0000000000001c90       0x4c ./freeRTOS/src/tasks.o
+                0x0000000000001c94       0x4c ./freeRTOS/src/tasks.o
  .text.xTaskResumeAll
-                0x0000000000001cdc       0xfc ./freeRTOS/src/tasks.o
-                0x0000000000001cdc                xTaskResumeAll
+                0x0000000000001ce0       0xfc ./freeRTOS/src/tasks.o
+                0x0000000000001ce0                xTaskResumeAll
  .text.vTaskStepTick
-                0x0000000000001dd8       0x24 ./freeRTOS/src/tasks.o
-                0x0000000000001dd8                vTaskStepTick
+                0x0000000000001ddc       0x24 ./freeRTOS/src/tasks.o
+                0x0000000000001ddc                vTaskStepTick
  .text.xTaskIncrementTick
-                0x0000000000001dfc      0x18c ./freeRTOS/src/tasks.o
-                0x0000000000001dfc                xTaskIncrementTick
+                0x0000000000001e00      0x18c ./freeRTOS/src/tasks.o
+                0x0000000000001e00                xTaskIncrementTick
  .text.vTaskSwitchContext
-                0x0000000000001f88       0x98 ./freeRTOS/src/tasks.o
-                0x0000000000001f88                vTaskSwitchContext
+                0x0000000000001f8c       0x98 ./freeRTOS/src/tasks.o
+                0x0000000000001f8c                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x0000000000002020       0x60 ./freeRTOS/src/tasks.o
-                0x0000000000002020                vTaskPlaceOnEventList
+                0x0000000000002024       0x60 ./freeRTOS/src/tasks.o
+                0x0000000000002024                vTaskPlaceOnEventList
  .text.xTaskRemoveFromEventList
-                0x0000000000002080       0xac ./freeRTOS/src/tasks.o
-                0x0000000000002080                xTaskRemoveFromEventList
+                0x0000000000002084       0xac ./freeRTOS/src/tasks.o
+                0x0000000000002084                xTaskRemoveFromEventList
  .text.vTaskSetTimeOutState
-                0x000000000000212c       0x2c ./freeRTOS/src/tasks.o
-                0x000000000000212c                vTaskSetTimeOutState
+                0x0000000000002130       0x2c ./freeRTOS/src/tasks.o
+                0x0000000000002130                vTaskSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x0000000000002158       0x88 ./freeRTOS/src/tasks.o
-                0x0000000000002158                xTaskCheckForTimeOut
+                0x000000000000215c       0x88 ./freeRTOS/src/tasks.o
+                0x000000000000215c                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x00000000000021e0       0x18 ./freeRTOS/src/tasks.o
-                0x00000000000021e0                vTaskMissedYield
+                0x00000000000021e4       0x18 ./freeRTOS/src/tasks.o
+                0x00000000000021e4                vTaskMissedYield
  .text.prvIdleTask
-                0x00000000000021f8       0x48 ./freeRTOS/src/tasks.o
+                0x00000000000021fc       0x48 ./freeRTOS/src/tasks.o
  .text.eTaskConfirmSleepModeStatus
-                0x0000000000002240       0x5c ./freeRTOS/src/tasks.o
-                0x0000000000002240                eTaskConfirmSleepModeStatus
+                0x0000000000002244       0x5c ./freeRTOS/src/tasks.o
+                0x0000000000002244                eTaskConfirmSleepModeStatus
  .text.prvInitialiseTCBVariables
-                0x000000000000229c       0x98 ./freeRTOS/src/tasks.o
+                0x00000000000022a0       0x98 ./freeRTOS/src/tasks.o
  .text.prvInitialiseTaskLists
-                0x0000000000002334       0x80 ./freeRTOS/src/tasks.o
+                0x0000000000002338       0x80 ./freeRTOS/src/tasks.o
  .text.prvCheckTasksWaitingTermination
-                0x00000000000023b4       0x78 ./freeRTOS/src/tasks.o
+                0x00000000000023b8       0x78 ./freeRTOS/src/tasks.o
  .text.prvAddCurrentTaskToDelayedList
-                0x000000000000242c       0x6c ./freeRTOS/src/tasks.o
+                0x0000000000002430       0x6c ./freeRTOS/src/tasks.o
  .text.prvAllocateTCBAndStack
-                0x0000000000002498       0x62 ./freeRTOS/src/tasks.o
+                0x000000000000249c       0x62 ./freeRTOS/src/tasks.o
  .text.prvDeleteTCB
-                0x00000000000024fa       0x20 ./freeRTOS/src/tasks.o
- *fill*         0x000000000000251a        0x2 ff
+                0x00000000000024fe       0x20 ./freeRTOS/src/tasks.o
+ *fill*         0x000000000000251e        0x2 ff
  .text.xTaskGetCurrentTaskHandle
-                0x000000000000251c       0x1c ./freeRTOS/src/tasks.o
-                0x000000000000251c                xTaskGetCurrentTaskHandle
+                0x0000000000002520       0x1c ./freeRTOS/src/tasks.o
+                0x0000000000002520                xTaskGetCurrentTaskHandle
  .text.vTaskPriorityInherit
-                0x0000000000002538       0xb4 ./freeRTOS/src/tasks.o
-                0x0000000000002538                vTaskPriorityInherit
+                0x000000000000253c       0xb4 ./freeRTOS/src/tasks.o
+                0x000000000000253c                vTaskPriorityInherit
  .text.vTaskPriorityDisinherit
-                0x00000000000025ec       0x7c ./freeRTOS/src/tasks.o
-                0x00000000000025ec                vTaskPriorityDisinherit
+                0x00000000000025f0       0x7c ./freeRTOS/src/tasks.o
+                0x00000000000025f0                vTaskPriorityDisinherit
  .text.Chip_IOCON_Init
-                0x0000000000002668       0x16 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x000000000000266c       0x16 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_Init
-                0x000000000000267e       0x16 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000000000002682       0x16 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_SetPinState
-                0x0000000000002694       0x64 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000000000002698       0x64 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_WritePortBit
-                0x00000000000026f8       0x2c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000000000026fc       0x2c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_SetPinDIROutput
-                0x0000000000002724       0x36 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000000000002728       0x36 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_SetPinDIRInput
-                0x000000000000275a       0x3a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x000000000000275e       0x3a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_SetPinDIR
-                0x0000000000002794       0x42 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000000000002798       0x42 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_WriteDirBit
-                0x00000000000027d6       0x2e /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000000000027da       0x2e /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_UART_ConfigData
-                0x0000000000002804       0x1a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- *fill*         0x000000000000281e        0x2 ff
+                0x0000000000002808       0x1a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ *fill*         0x0000000000002822        0x2 ff
  .text.Board_LED_Init
-                0x0000000000002820       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000000000002824       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Board_UART_Init
-                0x0000000000002838       0x12 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x0000000000002838                Board_UART_Init
- *fill*         0x000000000000284a        0x2 ff
+                0x000000000000283c       0x12 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x000000000000283c                Board_UART_Init
+ *fill*         0x000000000000284e        0x2 ff
  .text.Board_Debug_Init
-                0x000000000000284c       0x30 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x000000000000284c                Board_Debug_Init
+                0x0000000000002850       0x30 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000000000002850                Board_Debug_Init
  .text.Board_LED_Set
-                0x000000000000287c       0x30 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x000000000000287c                Board_LED_Set
+                0x0000000000002880       0x30 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000000000002880                Board_LED_Set
  .text.Board_Init
-                0x00000000000028ac       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x00000000000028ac                Board_Init
+                0x00000000000028b0       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000000000028b0                Board_Init
  .text.Board_SPI_Init
-                0x00000000000028d0       0x84 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x00000000000028d0                Board_SPI_Init
+                0x00000000000028d4       0x84 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000000000028d4                Board_SPI_Init
  .text.Board_SPI_DeassertSSEL
-                0x0000000000002954       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x0000000000002954                Board_SPI_DeassertSSEL
+                0x0000000000002958       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000000000002958                Board_SPI_DeassertSSEL
  .text.Chip_SYSCTL_SetFLASHAccess
-                0x000000000000296c       0x30 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x0000000000002970       0x30 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
  .text.Board_SetupMuxing
-                0x000000000000299c       0x1c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
-                0x000000000000299c                Board_SetupMuxing
+                0x00000000000029a0       0x1c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x00000000000029a0                Board_SetupMuxing
  .text.Board_SetupClocking
-                0x00000000000029b8       0x12 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
-                0x00000000000029b8                Board_SetupClocking
+                0x00000000000029bc       0x12 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x00000000000029bc                Board_SetupClocking
  .text.Board_SystemInit
-                0x00000000000029ca       0x10 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
-                0x00000000000029ca                Board_SystemInit
- *fill*         0x00000000000029da        0x2 ff
+                0x00000000000029ce       0x10 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x00000000000029ce                Board_SystemInit
+ *fill*         0x00000000000029de        0x2 ff
  .text.SystemCoreClockUpdate
-                0x00000000000029dc       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
-                0x00000000000029dc                SystemCoreClockUpdate
+                0x00000000000029e0       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+                0x00000000000029e0                SystemCoreClockUpdate
  .text.Chip_Clock_IsMainPLLEnabled
-                0x00000000000029f4       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00000000000029f8       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_IsMainPLLConnected
-                0x0000000000002a18       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002a1c       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_FeedPLL
-                0x0000000000002a3c       0x34 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002a40       0x34 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetMainPLLSource
-                0x0000000000002a70       0x20 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002a74       0x20 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetMainOscRate
-                0x0000000000002a90       0x14 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002a94       0x14 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetIntOscRate
-                0x0000000000002aa4       0x14 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002aa8       0x14 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetRTCOscRate
-                0x0000000000002ab8       0x14 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002abc       0x14 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetMainPLLInClockRate
-                0x0000000000002acc        0xe /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
- *fill*         0x0000000000002ada        0x2 ff
+                0x0000000000002ad0        0xe /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+ *fill*         0x0000000000002ade        0x2 ff
  .text.Chip_Clock_EnablePLL
-                0x0000000000002adc       0x44 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002adc                Chip_Clock_EnablePLL
+                0x0000000000002ae0       0x44 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002ae0                Chip_Clock_EnablePLL
  .text.Chip_Clock_DisablePLL
-                0x0000000000002b20       0x48 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002b20                Chip_Clock_DisablePLL
+                0x0000000000002b24       0x48 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002b24                Chip_Clock_DisablePLL
  .text.Chip_Clock_SetupPLL
-                0x0000000000002b68       0x5c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002b68                Chip_Clock_SetupPLL
+                0x0000000000002b6c       0x5c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002b6c                Chip_Clock_SetupPLL
  .text.Chip_Clock_EnablePeriphClock
-                0x0000000000002bc4       0x34 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002bc4                Chip_Clock_EnablePeriphClock
+                0x0000000000002bc8       0x34 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002bc8                Chip_Clock_EnablePeriphClock
  .text.Chip_Clock_GetCPUClockSource
-                0x0000000000002bf8       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002bf8                Chip_Clock_GetCPUClockSource
+                0x0000000000002bfc       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002bfc                Chip_Clock_GetCPUClockSource
  .text.Chip_Clock_SetCPUClockDiv
-                0x0000000000002c1c       0x20 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002c1c                Chip_Clock_SetCPUClockDiv
+                0x0000000000002c20       0x20 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002c20                Chip_Clock_SetCPUClockDiv
  .text.Chip_Clock_GetCPUClockDiv
-                0x0000000000002c3c       0x1c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002c3c                Chip_Clock_GetCPUClockDiv
+                0x0000000000002c40       0x1c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002c40                Chip_Clock_GetCPUClockDiv
  .text.Chip_Clock_GetPCLKDiv
-                0x0000000000002c58       0x8c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002c58                Chip_Clock_GetPCLKDiv
+                0x0000000000002c5c       0x8c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002c5c                Chip_Clock_GetPCLKDiv
  .text.Chip_Clock_GetSYSCLKRate
-                0x0000000000002ce4       0x34 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002ce4                Chip_Clock_GetSYSCLKRate
+                0x0000000000002ce8       0x34 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002ce8                Chip_Clock_GetSYSCLKRate
  .text.Chip_Clock_GetMainPLLOutClockRate
-                0x0000000000002d18       0x54 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002d18                Chip_Clock_GetMainPLLOutClockRate
+                0x0000000000002d1c       0x54 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002d1c                Chip_Clock_GetMainPLLOutClockRate
  .text.Chip_Clock_GetMainClockRate
-                0x0000000000002d6c       0x28 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002d6c                Chip_Clock_GetMainClockRate
+                0x0000000000002d70       0x28 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002d70                Chip_Clock_GetMainClockRate
  .text.Chip_Clock_GetSystemClockRate
-                0x0000000000002d94       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002d94                Chip_Clock_GetSystemClockRate
+                0x0000000000002d98       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002d98                Chip_Clock_GetSystemClockRate
  .text.Chip_Clock_GetPeripheralClockRate
-                0x0000000000002dac       0x26 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000002dac                Chip_Clock_GetPeripheralClockRate
+                0x0000000000002db0       0x26 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000002db0                Chip_Clock_GetPeripheralClockRate
  .text.Chip_IOCON_PinMuxSet
-                0x0000000000002dd2       0x36 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
-                0x0000000000002dd2                Chip_IOCON_PinMuxSet
+                0x0000000000002dd6       0x36 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+                0x0000000000002dd6                Chip_IOCON_PinMuxSet
  .text.Chip_IOCON_PinMux
-                0x0000000000002e08       0x94 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
-                0x0000000000002e08                Chip_IOCON_PinMux
+                0x0000000000002e0c       0x94 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+                0x0000000000002e0c                Chip_IOCON_PinMux
  .text.Chip_IOCON_SetPinMuxing
-                0x0000000000002e9c       0x62 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
-                0x0000000000002e9c                Chip_IOCON_SetPinMuxing
+                0x0000000000002ea0       0x62 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+                0x0000000000002ea0                Chip_IOCON_SetPinMuxing
  .text.Chip_SPI_GetStatus
-                0x0000000000002efe       0x16 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x0000000000002f02       0x16 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
  .text.Chip_SPI_SendFrame
-                0x0000000000002f14       0x1c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x0000000000002f18       0x1c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
  .text.Chip_SPI_ReceiveFrame
-                0x0000000000002f30       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x0000000000002f34       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
  .text.Chip_SPI_SetClockCounter
-                0x0000000000002f48       0x1a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x0000000000002f4c       0x1a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
  .text.Chip_SPI_SetMode
-                0x0000000000002f62       0x26 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x0000000000002f66       0x26 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
  .text.Chip_SPI_Int_ClearStatus
-                0x0000000000002f88       0x1a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x0000000000002f8c       0x1a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
  .text.executeCallback
-                0x0000000000002fa2       0x1c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x0000000000002fa6       0x1c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
  .text.writeData
-                0x0000000000002fbe       0x5c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x0000000000002fc2       0x5c /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
  .text.readData
-                0x000000000000301a       0x56 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x000000000000301e       0x56 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
  .text.Chip_SPI_Int_FlushData
-                0x0000000000003070       0x28 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
-                0x0000000000003070                Chip_SPI_Int_FlushData
+                0x0000000000003074       0x28 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x0000000000003074                Chip_SPI_Int_FlushData
  .text.Chip_SPI_Int_RWFrames
-                0x0000000000003098       0xa6 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
-                0x0000000000003098                Chip_SPI_Int_RWFrames
+                0x000000000000309c       0xa6 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x000000000000309c                Chip_SPI_Int_RWFrames
  .text.Chip_SPI_Int_RWFrames8Bits
-                0x000000000000313e       0x1e /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
-                0x000000000000313e                Chip_SPI_Int_RWFrames8Bits
+                0x0000000000003142       0x1e /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x0000000000003142                Chip_SPI_Int_RWFrames8Bits
  .text.Chip_SPI_SetBitRate
-                0x000000000000315c       0x4a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
-                0x000000000000315c                Chip_SPI_SetBitRate
- *fill*         0x00000000000031a6        0x2 ff
+                0x0000000000003160       0x4a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x0000000000003160                Chip_SPI_SetBitRate
+ *fill*         0x00000000000031aa        0x2 ff
  .text.Chip_SPI_Init
-                0x00000000000031a8       0x44 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
-                0x00000000000031a8                Chip_SPI_Init
+                0x00000000000031ac       0x44 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(spi_17xx_40xx.o)
+                0x00000000000031ac                Chip_SPI_Init
  .text.Chip_Clock_IsMainPLLEnabled
-                0x00000000000031ec       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x00000000000031f0       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_IsMainPLLLocked
-                0x0000000000003210       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x0000000000003214       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_IsMainPLLConnected
-                0x0000000000003234       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x0000000000003238       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_EnableCrystal
-                0x0000000000003258       0x20 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x000000000000325c       0x20 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_IsCrystalEnabled
-                0x0000000000003278       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x000000000000327c       0x24 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_SetMainPLLSource
-                0x000000000000329c       0x20 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x00000000000032a0       0x20 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_SetupXtalClocking
-                0x00000000000032bc       0x90 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
-                0x00000000000032bc                Chip_SetupXtalClocking
+                0x00000000000032c0       0x90 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x00000000000032c0                Chip_SetupXtalClocking
  .text.Chip_UART_SetupFIFOS
-                0x000000000000334c       0x1a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x0000000000003350       0x1a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_ConfigData
-                0x0000000000003366       0x1a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x000000000000336a       0x1a /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_EnableDivisorAccess
-                0x0000000000003380       0x1e /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x0000000000003384       0x1e /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_DisableDivisorAccess
-                0x000000000000339e       0x1e /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00000000000033a2       0x1e /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_SetDivisorLatches
-                0x00000000000033bc       0x26 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
- *fill*         0x00000000000033e2        0x2 ff
+                0x00000000000033c0       0x26 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+ *fill*         0x00000000000033e6        0x2 ff
  .text.Chip_UART_GetClockIndex
-                0x00000000000033e4       0x50 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00000000000033e8       0x50 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_GetClkIndex
-                0x0000000000003434       0x50 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x0000000000003438       0x50 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_Init
-                0x0000000000003484       0x78 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x0000000000003484                Chip_UART_Init
+                0x0000000000003488       0x78 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x0000000000003488                Chip_UART_Init
  .text.Chip_UART_TXEnable
-                0x00000000000034fc       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x00000000000034fc                Chip_UART_TXEnable
+                0x0000000000003500       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x0000000000003500                Chip_UART_TXEnable
  .text.Chip_UART_TXDisable
-                0x0000000000003514       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x0000000000003514                Chip_UART_TXDisable
+                0x0000000000003518       0x18 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x0000000000003518                Chip_UART_TXDisable
  .text.Chip_UART_SetBaud
-                0x000000000000352c       0x62 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x000000000000352c                Chip_UART_SetBaud
- *fill*         0x000000000000358e        0x2 ff
- .text          0x0000000000003590       0x30 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_aeabi_uldivmod.o)
-                0x0000000000003590                __aeabi_uldivmod
- .text          0x00000000000035c0      0x2d0 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
-                0x00000000000035c0                __udivmoddi4
- .text          0x0000000000003890        0x4 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_dvmd_tls.o)
-                0x0000000000003890                __aeabi_ldiv0
-                0x0000000000003890                __aeabi_idiv0
+                0x0000000000003530       0x62 /home/tarak/Documents/MCUXpresso_10.2.0_759/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x0000000000003530                Chip_UART_SetBaud
+ *fill*         0x0000000000003592        0x2 ff
+ .text          0x0000000000003594       0x30 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_aeabi_uldivmod.o)
+                0x0000000000003594                __aeabi_uldivmod
+ .text          0x00000000000035c4      0x2d0 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+                0x00000000000035c4                __udivmoddi4
+ .text          0x0000000000003894        0x4 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_dvmd_tls.o)
+                0x0000000000003894                __aeabi_ldiv0
+                0x0000000000003894                __aeabi_idiv0
  .text.__libc_init_array
-                0x0000000000003894       0x48 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
-                0x0000000000003894                __libc_init_array
- .text.malloc   0x00000000000038dc       0x10 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-malloc.o)
-                0x00000000000038dc                malloc
- .text.free     0x00000000000038ec       0x10 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-malloc.o)
-                0x00000000000038ec                free
+                0x0000000000003898       0x48 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
+                0x0000000000003898                __libc_init_array
+ .text.malloc   0x00000000000038e0       0x10 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-malloc.o)
+                0x00000000000038e0                malloc
+ .text.free     0x00000000000038f0       0x10 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-malloc.o)
+                0x00000000000038f0                free
  .text._malloc_r
-                0x00000000000038fc      0x524 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
-                0x00000000000038fc                _malloc_r
- .text          0x0000000000003e20       0xec /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memcpy.o)
-                0x0000000000003e20                memcpy
- .text.memset   0x0000000000003f0c       0x94 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
-                0x0000000000003f0c                memset
+                0x0000000000003900      0x524 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+                0x0000000000003900                _malloc_r
+ .text          0x0000000000003e24       0xec /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memcpy.o)
+                0x0000000000003e24                memcpy
+ .text.memset   0x0000000000003f10       0x94 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+                0x0000000000003f10                memset
  .text.__malloc_lock
-                0x0000000000003fa0        0xc /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mlock.o)
-                0x0000000000003fa0                __malloc_lock
+                0x0000000000003fa4        0xc /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mlock.o)
+                0x0000000000003fa4                __malloc_lock
  .text.__malloc_unlock
-                0x0000000000003fac        0xc /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mlock.o)
-                0x0000000000003fac                __malloc_unlock
- .text.printf   0x0000000000003fb8       0x28 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-printf.o)
-                0x0000000000003fb8                printf
- .text._sbrk_r  0x0000000000003fe0       0x24 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-sbrkr.o)
-                0x0000000000003fe0                _sbrk_r
+                0x0000000000003fb0        0xc /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mlock.o)
+                0x0000000000003fb0                __malloc_unlock
+ .text.printf   0x0000000000003fbc       0x28 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-printf.o)
+                0x0000000000003fbc                printf
+ .text._sbrk_r  0x0000000000003fe4       0x24 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-sbrkr.o)
+                0x0000000000003fe4                _sbrk_r
  .text._vfprintf_r
-                0x0000000000004004     0x1558 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-vfprintf.o)
-                0x0000000000004004                _vfprintf_r
+                0x0000000000004008     0x1558 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-vfprintf.o)
+                0x0000000000004008                _vfprintf_r
  .text.__sbprintf
-                0x000000000000555c       0x88 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-vfprintf.o)
+                0x0000000000005560       0x88 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-vfprintf.o)
  .text.__swsetup_r
-                0x00000000000055e4       0xcc /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-wsetup.o)
-                0x00000000000055e4                __swsetup_r
- .text.quorem   0x00000000000056b0      0x124 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-dtoa.o)
- *fill*         0x00000000000057d4        0x4 ff
+                0x00000000000055e8       0xcc /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-wsetup.o)
+                0x00000000000055e8                __swsetup_r
+ .text.quorem   0x00000000000056b4      0x124 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-dtoa.o)
  .text._dtoa_r  0x00000000000057d8      0xe30 /usr/local/mcuxpressoide-10.2.0_759/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-dtoa.o)
                 0x00000000000057d8                _dtoa_r
  .text.__sflush_r
